@@ -23,6 +23,11 @@ export default class BreweryControl extends Component {
       detailsVisible: true,
     });
   };
+  showEditModal = () => {
+    this.setState({
+      editsVisible: true,
+    });
+  };
 
 
   handleSubmit = (newKeg) => {
@@ -32,6 +37,19 @@ export default class BreweryControl extends Component {
       formModalVisible: false
     });
   };
+
+  handleEdit = (editedKeg, id) => {
+    this.setState(state => {
+      const masterKegList = state.masterKegList.map(beer => {
+        if (id === beer.id) {
+          return { ...editedKeg }
+        } else {
+          return beer
+        }
+      });
+      return { masterKegList }
+    })
+  }
 
 
   handleCancel = e => {
@@ -62,7 +80,7 @@ export default class BreweryControl extends Component {
       <>
         <Header handleCancel={this.handleCancel} handleOk={this.handleSubmit} showModal={this.showModal} visible={this.state.formModalVisible} />
         <div className="main-body">
-          <BeerList servePint={this.servePint} beerList={this.state.masterKegList} visible={this.state.detailsVisible} handleCancel={this.handleDetailClose} showModal={this.showDetailModal} />
+          <BeerList servePint={this.servePint} beerList={this.state.masterKegList} visible={this.state.detailsVisible} handleEdit={this.handleEdit} handleCancel={this.handleDetailClose} showModal={this.showDetailModal} />
         </div>
       </>
     )

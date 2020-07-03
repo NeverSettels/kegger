@@ -15,33 +15,15 @@ export default function Header(props) {
 
 
   function handleKegform(event) {
-    handleOk(
-      {
-        name,
-        brand,
-        img,
-        desc,
-        price,
-        alc,
-        pints: 124,
-        id: v4()
-      });
+    handleOk({ name, brand, img, desc, price, alc, pints: 124, id: v4() });
   }
 
   return (
     <nav>
       <img src="/wine.png" alt="keg logo" />
-      <Button type="primary" onClick={showModal}>
-        Add keg
-        </Button>
-      <Modal
-        title="Add Keg"
-        visible={visible}
-        onOk={handleKegform}
-        okText="Submit"
-        onCancel={handleCancel}
-      >
-        <form >
+      <Button type="primary" onClick={showModal}> Add keg</Button>
+      <Modal title="Add Keg" visible={visible} onOk={handleKegform} okText="Submit" onCancel={handleCancel}>
+        <form>
           <input value={name} onChange={e => setName(e.target.value)} type="text" name="name" placeholder="Beer Name" />
           <input value={brand} onChange={e => setBrand(e.target.value)} type="text" name="brand" placeholder="Brand Name" />
           <textarea value={desc} onChange={e => setDesc(e.target.value)} type="text" name="desc" placeholder="Description" />
