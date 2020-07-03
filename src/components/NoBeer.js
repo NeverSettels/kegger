@@ -5,9 +5,7 @@ export default function NoBeer() {
   return (
     <Empty
       image="sad.png"
-      description={
-        <h2>No beer yet! </h2>
-      }
+      description="no beer yet!"
     >
     </Empty>
   )

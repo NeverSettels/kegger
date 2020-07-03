@@ -8,9 +8,10 @@ export default function Header(props) {
 
   const [name, setName] = useState('');
   const [brand, setBrand] = useState('');
+  const [desc, setDesc] = useState('');
   const [img, setImg] = useState('https://morebeer-web-8-pavinthewaysoftw.netdna-ssl.com/product_image/morebeer/500x500/32750.png');
-  const [alc, setAlc] = useState(5);
-  const [price, setPrice] = useState(0);
+  const [alc, setAlc] = useState("");
+  const [price, setPrice] = useState("");
 
 
   function handleKegform(event) {
@@ -19,6 +20,7 @@ export default function Header(props) {
         name,
         brand,
         img,
+        desc,
         price,
         alc,
         pints: 124,
@@ -42,6 +44,7 @@ export default function Header(props) {
         <form >
           <input value={name} onChange={e => setName(e.target.value)} type="text" name="name" placeholder="Beer Name" />
           <input value={brand} onChange={e => setBrand(e.target.value)} type="text" name="brand" placeholder="Brand Name" />
+          <textarea value={desc} onChange={e => setDesc(e.target.value)} type="text" name="desc" placeholder="Description" />
           <input value={img} onChange={e => setImg(e.target.value)} type="url" name="img" placeholder="Enter Image Url" />
           <input value={price} onChange={e => setPrice(e.target.value)} type="number" name="price" placeholder="Price" />
           <input value={alc} onChange={e => setAlc(e.target.value)} type="number" name="alc" placeholder="Alchohol Content" />
