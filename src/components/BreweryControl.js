@@ -44,14 +44,25 @@ export default class BreweryControl extends Component {
       detailsVisible: false,
     });
   };
-
+  servePint = id => {
+    this.setState(state => {
+      const masterKegList = state.masterKegList.map(beer => {
+        if (beer.id === id && beer.pints > 0) {
+          return { ...beer, pints: beer.pints - 1 }
+        } else {
+          return beer
+        }
+      })
+      return { masterKegList }
+    })
+  }
 
   render() {
     return (
       <>
         <Header handleCancel={this.handleCancel} handleOk={this.handleSubmit} showModal={this.showModal} visible={this.state.formModalVisible} />
         <div className="main-body">
-          <BeerList beerList={this.state.masterKegList} visible={this.state.detailsVisible} handleCancel={this.handleDetailClose} showModal={this.showDetailModal} />
+          <BeerList servePint={this.servePint} beerList={this.state.masterKegList} visible={this.state.detailsVisible} handleCancel={this.handleDetailClose} showModal={this.showDetailModal} />
         </div>
       </>
     )

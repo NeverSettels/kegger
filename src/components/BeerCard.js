@@ -3,7 +3,7 @@ import { Modal, Button } from 'antd';
 
 
 export default function BeerCard(props) {
-  const { beer, visible, showModal, handleCancel } = props
+  const { beer, visible, showModal, handleCancel, servePint } = props
   return (
     <div className="beer-card" >
       <img src={beer.img} alt={beer.name} />
@@ -27,6 +27,7 @@ export default function BeerCard(props) {
         <p><strong>Price:</strong> ${beer.price}</p>
         <p><strong>Alcohol Content:</strong> {beer.price}%</p>
         <p><strong>Pints left: </strong>{beer.pints > 0 ? beer.pints : "Oops we're out!"}</p>
+        <Button className="secondary" onClick={() => servePint(beer.id)}>Serve Pint</Button>
       </Modal>
     </div>
   )
