@@ -1,4 +1,59 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Beer List
+### A react app where a user can create 'kegs' of beer, pour, remove, and change kegs as it properly increments by the pint.
+
+### _By Eric Settels July 2020_
+
+## Description
+A website for a brwery to display kegs of avalable booze . 
+
+## User Stories:
+* _User can add new beer keg to list_
+* _User can 'pour' pint from keg_
+* _User can change keg_
+* _User can delete keg listings_
+
+## Installation instructions
+
+Clone the project by typing this command into your terminal.
+```sh
+git clone 
+```
+followed by this repos url
+
+
+In the project directory, you can run: 
+
+ ```sh
+ npm i
+```
+to install necessary depenacies 
+
+finaly run 
+ ```sh
+ npm start 
+```
+to boot up the project
+
+## Component diagram 
+
+![Component Map](public/brewery-diagram.PNG)
+
+
+## Known Bugs
+
+_No known bugs at this time._
+
+## Technologies Used
+
+* Node.js
+* Webpack
+* npm
+* Javascript
+* jQuery
+* React
+* antd
+
+
 
 ## Available Scripts
 
@@ -66,3 +121,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+Copyright &copy; 2020 **_Eric Settels_**
+
+<hr>
