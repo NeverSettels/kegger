@@ -112,6 +112,11 @@ form textarea{
   box-shadow: 10px 5px 8px rgba(0, 0, 0, 0.748);
   background-color: rgba(255, 255, 255, 0.639);
 }
+.buttons{
+  width:100%;
+  display: flex;
+  justify-content: space-evenly;
+}
 .beer-card img{
   max-width: 100%;
 }
@@ -126,4 +131,17 @@ form textarea{
   font-weight: 900;
   color: white;
   font-size: 16px;
+}
+
+.delete{
+  height: 90%;
+  border: 2px red solid;
+  color: red;
+  font-weight: 900;
+  background-color: none;
+  transition: all .2s linear;
+}
+.delete:hover{
+  color: white;
+  background-color: red;
 }

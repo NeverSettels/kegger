@@ -74,13 +74,16 @@ export default class BreweryControl extends Component {
       return { masterKegList }
     })
   }
-
+  delete = id => {
+    const masterKegList = this.state.masterKegList.filter(shirt => shirt.id !== id)
+    this.setState({ masterKegList })
+  }
   render() {
     return (
       <>
         <Header handleCancel={this.handleCancel} handleOk={this.handleSubmit} showModal={this.showModal} visible={this.state.formModalVisible} />
         <div className="main-body">
-          <BeerList servePint={this.servePint} beerList={this.state.masterKegList} visible={this.state.detailsVisible} handleEdit={this.handleEdit} handleCancel={this.handleDetailClose} showModal={this.showDetailModal} />
+          <BeerList handleDelete={this.delete} servePint={this.servePint} beerList={this.state.masterKegList} visible={this.state.detailsVisible} handleEdit={this.handleEdit} handleCancel={this.handleDetailClose} showModal={this.showDetailModal} />
         </div>
       </>
     )
