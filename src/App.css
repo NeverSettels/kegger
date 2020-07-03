@@ -91,7 +91,17 @@ form{
 form input, form textarea{
   width: 80%;
   margin: 1rem;
+  border: 1px solid #282c34;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.748);
+  border-radius: 5px;
 
+}
+
+form input{
+  height: 30px
+}
+form textarea{
+  height: 80px
 }
 .beer-card{
   max-width: 20%;
