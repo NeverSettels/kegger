@@ -36,6 +36,7 @@ export default function Header(props) {
         title="Add Keg"
         visible={visible}
         onOk={handleKegform}
+        okText="Submit"
         onCancel={handleCancel}
       >
         <form >

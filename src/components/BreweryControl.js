@@ -37,8 +37,7 @@ export default class BreweryControl extends Component {
     return (
       <>
         <Header handleCancel={this.handleCancel} handleOk={this.handleOk} showModal={this.showModal} this={this.handleCancel} visible={this.state.formModalVisible} />
-        <div>
-
+        <div className="main-body">
           <BeerList beerList={this.state.masterKegList} />
         </div>
       </>
