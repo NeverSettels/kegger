@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Modal, Button } from 'antd';
+import { Modal } from 'antd';
 import { v4 } from 'uuid';
 import PropTypes from "prop-types"
 
@@ -21,7 +21,8 @@ export default function Header(props) {
   return (
     <nav>
       <img src="/wine.png" alt="keg logo" />
-      <Button type="primary" onClick={showModal}> Add keg</Button>
+      <h1>Kegger</h1>
+      <button className="add-keg" onClick={showModal}> Add Keg</button>
       <Modal title="Add Keg" visible={visible} onOk={handleKegform} okText="Submit" onCancel={handleCancel}>
         <form>
           <input value={name} onChange={e => setName(e.target.value)} type="text" name="name" placeholder="Beer Name" />

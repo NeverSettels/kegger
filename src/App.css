@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: rgb(99, 72, 37);
 }
 
 .App-logo {
@@ -35,4 +36,84 @@
   to {
     transform: rotate(360deg);
   }
+}
+nav{
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5em;
+  border-bottom: #282c34 solid 3px;
+  box-shadow: 5px 0 8px rgba(0, 0, 0, 0.836);
+  background-color: rgb(18, 74, 18);
+}
+nav h1{
+  font-size: 43px;
+  color: white;
+}
+
+.add-keg{
+  height: 90%;
+  border: 2px white solid;
+  color: white;
+  font-weight: 900;
+  background-color: rgb(18, 74, 18);
+  transition: all .2s linear;
+}
+.add-keg:hover{
+  color: rgb(18, 74, 18);
+  background-color: white;
+}
+.main-body{
+  width: 100vw;
+  min-height: 85vh;
+ background-color: rgb(74, 54, 28);
+ background-size: 100%;
+}
+.main-body>div{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+form{
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+form input, form textarea{
+  width: 80%;
+  margin: 1rem;
+
+}
+.beer-card{
+  max-width: 20%;
+  padding: 1rem;
+  border:1px solid #282c34;
+  border-radius: 5px;
+  margin: 1rem;
+  box-shadow: 10px 5px 8px rgba(0, 0, 0, 0.748);
+  background-color: rgba(255, 255, 255, 0.639);
+}
+.beer-card img{
+  max-width: 100%;
+}
+.empty{
+  height: 85vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ant-empty-description{
+  font-weight: 900;
+  color: white;
+  font-size: 16px;
 }
